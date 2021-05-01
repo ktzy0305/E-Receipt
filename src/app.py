@@ -1,6 +1,9 @@
+import os, sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
 from flask import Flask, jsonify, render_template, send_file
 from flask.globals import request
-from receipt import generate_receipt
+from src.receipt import generate_receipt
 
 app = Flask(__name__)
 
