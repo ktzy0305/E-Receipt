@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Receipt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <script src="{{ url_for('static', filename='js/axios.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>E-Receipt</h1>
+                <hr>
+                <p>The idea behind E-Receipt is to come up with a paperless solution to display receipts for both cash and cashless payment on a point of sales system or self-service kiosk.</p>
+                <h3>Try Out The API</h3>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <code>
+                <pre>
+{
+    "retailer": "H&M Hennes & Mauritz Pte Ltd"
+    "address" : "JEM, Jurong Gateway Road #01-01 Singapore 608549",
+    "gst_reg_no" : "M93217469R",
+    "cashier_id" : 2729,
+    "transaction_id" : 767664,
+    "timestamp" : "05/02/2016 13:38:00",
+    "products": [
+        {
+            "name": "Soap", 
+            "qty": 2, 
+            "price": 6.25, 
+            "total": 12.50
+        },
+        {
+            "name": "Cookies", 
+            "qty": 1, 
+            "price": 5.40, 
+            "total": 5.40
+        }
+    ],
+    "subtotal": 17.90,
+    "gst": 1.25,
+    "total": 19.15,
+    "paymentMethod": "cash",
+    "received": 20,
+    "change": 0.85,
+    "refund_policy": "Exchange and refund within 30 days with original receipt and price tag."
+}   
+                </pre>    
+            </code>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12">
+                <button type="submit" onclick="GenerateReceipt()">Generate Receipt</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

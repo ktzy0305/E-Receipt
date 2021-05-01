@@ -1,0 +1,39 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+    display: flexbox;
+    flex-direction: row;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-12{
+    width: 100%
+}
+
+.mt-5{
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px){
+    .container{width: 80%;}
+}
+
+@media only screen and (max-width: 512px){
+    .container{width: 85%;}
+}
+
+@media only screen and (max-width: 448px){
+    .container{width: 90%;}
+}
+
+@media only screen and (max-width: 384px){
+    .container{width: 95%;}
+}
