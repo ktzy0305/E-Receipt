@@ -24,7 +24,7 @@ function GenerateReceipt(){
         "subtotal": 17.90,
         "gst": 1.25,
         "total": 19.15,
-        "paymentMethod": "cash",
+        "payment_method": "cash",
         "received": 20,
         "change": 0.85,
         "refund_policy": "Exchange and refund within 30 days with original receipt and price tag."
@@ -32,10 +32,9 @@ function GenerateReceipt(){
 
     axios.post('/api', receipt_data)
         .then((response)=>{
-            console.log(response.data)
             var file = new Blob([response.data], { type: 'application/pdf' });
             var fileURL = URL.createObjectURL(file);
-            window.open(fileURL);
+            window.open(fileURL, '_blank'); // Does not work on Safari
         },
         (error) => { 
             console.log(error) 

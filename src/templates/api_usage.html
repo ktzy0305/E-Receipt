@@ -4,26 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The E-Receipt Project</title>
+    <title>The E-Receipt Project | API</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
-    <script src="{{ url_for('static', filename='js/axios.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>The E-Receipt Project</h1>
-                <hr>
-                <p>The idea behind the E-Receipt project is to use tech to come up with various paperless solutions to display receipts for both cash and cashless payment on a point of sales system or self-service kiosk.</p>
-                <h3>Try Out The API</h3>
-                <hr>
-            </div>
-        </div>
-        <div class="row">
-            <code>
-                <pre>
-{
+                You are seeing this page because you have used the wrong HTTP request method.
+                <br/>
+                <h3>Example Usage (cURL):</h3>
+                <code>
+                    <pre>
+curl --header "Content-Type: application/json" \
+--request POST \
+--data '{
     "retailer": "H&M Hennes & Mauritz Pte Ltd"
     "address" : "JEM, Jurong Gateway Road #01-01 Singapore 608549",
     "gst_reg_no" : "M93217469R",
@@ -51,13 +46,10 @@
     "received": 20,
     "change": 0.85,
     "refund_policy": "Exchange and refund within 30 days with original receipt and price tag."
-}   
-                </pre>    
-            </code>
-        </div>
-        <div class="row mt-5">
-            <div class="col-12">
-                <button class="btn" type="submit" onclick="GenerateReceipt()">Generate Receipt</button>
+} ' \
+http://https://e-receipt-project.herokuapp.com//api                      
+                    </pre>
+                </code>
             </div>
         </div>
     </div>

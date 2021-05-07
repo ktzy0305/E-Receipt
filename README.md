@@ -34,5 +34,5 @@ curl --header "Content-Type: application/json" \
     "change": 0.85,
     "refund_policy": "Exchange and refund within 30 days with original receipt and price tag."
 } ' \
-  http://domainnametobeconfirmed/api
+  http://https://e-receipt-project.herokuapp.com//api
 ```
